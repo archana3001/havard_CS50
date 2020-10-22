@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+       .form{
+         padding: 10px;
+         text-align: center;
+       }
+       input{
+         border-radius: 15px;
+          text-align: center;
+       }
+       #querie{
+         width: 35%;
+         border-color: grey;
+       }
+    </style>
+  </head>
+  <body>
+    <div class="container"><br />
+      <div style="text-align: right">
+      <div  style="">
+        <a href="./GoogleImageSearch.html">Image Search</a>
+      </div>
+       <div>
+         <a href="./GoogleAdvanceSearch.html">Advance Search</a>
+       </div>
+      </div>
+      <br /><br /><br /><br />
+      <div class="form">
+        <img src="./googlelogo.png"/><br /><br /><br />
+        <form action="https://google.com/search">
+          <input id="querie" type="text" name="q"/>
+          <input type="submit" value="Google Search" style="background: blue ;color: white">
+          </form>
+      </div>
+    </div>
+
+  </body>
+</html>
