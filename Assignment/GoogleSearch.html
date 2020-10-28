@@ -5,19 +5,19 @@
     <title></title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
   integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <style>
+  <link href="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
        .form{
          padding: 10px;
          text-align: center;
        }
        input{
          border-radius: 15px;
-          text-align: center;
+         padding: 2px;
+         margin-left: 8px;
        }
-       #querie{
-         width: 35%;
-         border-color: grey;
-       }
+     
     </style>
   </head>
   <body>
@@ -32,13 +32,41 @@
       </div>
       <br /><br /><br /><br />
       <div class="form">
-        <img src="./googlelogo.png"/><br /><br /><br />
-        <form action="https://google.com/search">
-          <input id="querie" type="text" name="q"/>
-          <input type="submit" value="Google Search" style="background: blue ;color: white">
+        <img src="./googlelogo.png" width="30%"/><br /><br /><br />
+        <form id="data" action="https://google.com/search">
+          <div class="input-group mb-4 border rounded-pill p-1">
+            <div class="input-group-prepend border-0">
+              <button id="button-addon4" type="button" class="btn btn-link text-info"><i class="fa fa-search"></i></button>
+            </div>
+            <input id="querie"  type="search"name="q" aria-describedby="button-addon4"  size="70" class="form-control bg-none border-0">
+          </div>
           </form>
+          <br>
+          <button class="btn  text-info" type="submit" onclick="google()" style="background:  rgba(128, 128, 128, 0.062); color: darkgrey; ">Google Search</button> 
+        &emsp;  <button class="btn  text-info" onclick="lucky()"  style="background: rgba(128, 128, 128, 0.062) ; color: darkgrey;">I'm Feeling Lucky</button>
       </div>
     </div>
-
+    <script type="text/javascript" language="javascript">
+      function lucky(){
+        var a=document.getElementById("querie").value;
+        console.log(a);
+        alert("redirecting........");
+      if(a==""){
+      window.location="https://google.com/doodles/";
+      }
+      else{
+        window.location="https://google.com/search?&q="+a+"&btnI";
+      }
+      }
+      function google(){
+        var a=document.getElementById("querie").value;
+        if(a==""){
+      window.location="https://google.com/search";
+      }
+      else{
+        window.location="https://google.com/search?&q="+a;
+      }
+      }
+      </script>
   </body>
 </html>

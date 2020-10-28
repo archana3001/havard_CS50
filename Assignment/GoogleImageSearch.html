@@ -6,14 +6,15 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
   integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
-       .form{
+   .form{
          padding: 10px;
          text-align: center;
        }
-
-       #querie{
-         width: 35%;
-         border-color: grey;
+       input{
+         border-radius: 15px;
+         padding: 2px;
+         margin-left: 8px;
+         margin-right: 8px;
        }
     </style>
   </head>
@@ -21,10 +22,19 @@
     <div class="container"><br />
       <br /><br /><br /><br />
       <div class="form">
-        <img src="./googlelogo.png"/><br /><br /><br />
+        <a href="./GoogleSearch.html"><img src="./googlelogo.png" width=30% alt="google"></a><br /><br /><br />
         <form action="https://google.com/search">
-          <input id="querie" type="file" name="q" value="choose image"/>
-          <button type="submit" value="" style="background: blue ;color: white">Google Search</button>
+          <input type="hidden" name="hl" value="en">
+          <input type="hidden" name="authuser" value="0">
+          <input type="hidden" name="tbm" value="isch">
+          <div class="input-group mb-4 border rounded-pill p-1">
+            <input id="querie"  type="search"name="q" class="form-control"> 
+            <div class="input-group-prepend border-0">
+              <button class="btn text-info" type="submit" value="" style="background: rgba(213, 213, 218, 0.164) ;color: rgba(165, 158, 158, 0.87)">Google Image Search</button>
+            </div>         </div>
+          <input type="hidden" name="oq"/>
+          <input type="hidden" name="sclient" value="img">
+          <input type="hidden" name="uact" value="5">
           </form>
       </div>
     </div>
